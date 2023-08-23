@@ -13,6 +13,8 @@ int main(int argc, char *argv[])
 	instruction_t instructions[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
+		{"pop", pop},
 		{NULL, NULL}
 	};
 
@@ -28,7 +30,7 @@ int main(int argc, char *argv[])
 	while (getline(&line_buf, &line_buf_size, file) != -1)
 	{
 		line_number++;
-		opcode = strtok(line_buf, " \n");
+		opcode = strtok(line_buf, " \t\n\r");
 		if (opcode == NULL || opcode[0] == '#')
 			continue;
 

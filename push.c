@@ -6,7 +6,7 @@
  */
 void push(stack_t **stack, unsigned int line_number)
 {
-	char *num_str = strtok(NULL, " \n");
+	char *num_str = strtok(NULL, " \t\n\r");
 	int num;
 	stack_t *new_node;
 
