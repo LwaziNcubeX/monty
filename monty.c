@@ -1,11 +1,5 @@
 #include "monty.h"
-/**
- * main - Entry point of the program
- * @argc: Number of arguments passed to the program
- * @argv: Array of strings containing arguments passed to the program
- *
- * Return: Always 0 (Success)
- */
+
 stack_t *stack = NULL;
 unsigned int line_number = 0;
 
@@ -34,7 +28,7 @@ int main(int argc, char *argv[])
 	while (getline(&line_buf, &line_buf_size, file) != -1)
 	{
 		line_number++;
-		opcode = strtok(line_buf, " $\n");
+		opcode = strtok(line_buf, " \n");
 		if (opcode == NULL || opcode[0] == '#')
 			continue;
 
