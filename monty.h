@@ -40,7 +40,6 @@ typedef struct instruction_s
 
 
 extern stack_t *stack;
-extern unsigned int line_number;
 
 
 void push(stack_t **stack, unsigned int line_number);
@@ -49,5 +48,8 @@ void free_stack(stack_t *stack);
 void check_argc(int argc);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
+void interpret_file(FILE *file);
+void execute_instruction(char *line_buf, unsigned int line_number);
+int is_number(char *s);
 
 #endif /* MONTY_H */
