@@ -31,13 +31,7 @@ void execute_instruction(char *line_buf, unsigned int line_number)
 	char *opcode;
 	int i = 0;
 
-	instruction_t instructions[] = {
-		{"push", push},
-		{"pall", pall},
-		{"pint", pint},
-		{"pop", pop},
-		{NULL, NULL}
-	};
+	instruction_t *instructions = get_instructions();
 
 	opcode = strtok(line_buf, " \t\n\r");
 	if (opcode == NULL || opcode[0] == '#')
