@@ -13,6 +13,7 @@ instruction_t *get_instructions(void)
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 
