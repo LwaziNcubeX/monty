@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * add - adds the top two elements of the stack
+ * nop - adds the top two elements of the stack
  * @stack: double pointer to the stack
  * @line_number: line number of the opcode
  **/
