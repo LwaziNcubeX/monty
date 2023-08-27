@@ -1,12 +1,12 @@
 #include "monty.h"
 /**
- * add - adds the top two elements of the stack
+ * mul - multiplies the top two elements of the stack
  * @stack: double pointer to the stack
  * @line_number: line number of the opcode
  **/
-void add(stack_t **stack, unsigned int line_number)
+void mul(stack_t **stack, unsigned int line_number)
 {
-	int res;
+	int res; /*results*/
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
@@ -14,7 +14,7 @@ void add(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	res = (int) (*stack)->next->n * (*stack)->n;
+	res = (*stack)->next->n * (*stack)->n;
 	pop(stack, line_number);
 	(*stack)->n = res;
 }
