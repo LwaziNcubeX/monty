@@ -16,6 +16,8 @@ instruction_t *get_instructions(void)
 		{"nop", nop},
 		{"sub", sub},
 		{"div", mdiv},
+		{"mul", mul},
+		{"mod", mod},
 		{NULL, NULL}
 	};
 
