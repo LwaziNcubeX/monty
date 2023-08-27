@@ -14,6 +14,7 @@ instruction_t *get_instructions(void)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
+		{"sub", sub},
 		{NULL, NULL}
 	};
 
